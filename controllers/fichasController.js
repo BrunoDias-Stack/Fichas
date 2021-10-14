@@ -10,9 +10,12 @@ module.exports = {
     },  
    async save(req, res, next){
         /* adicionando objeto criado dentro do array dados */
-        fs.readdir(dir, (err, files) => {
-            console.log(files.length);
-            });
+        // fs.readdir(dir, (err, files) => {
+        //     console.log(files.length);
+        //     });
+        
+        let form = req.body
+        console.log(form)
         dados.push(campos);   
         /* executando funcao que salva alteracoes dos registros no arquivo dados.js */
         saveData(dados, 'dados.js');
